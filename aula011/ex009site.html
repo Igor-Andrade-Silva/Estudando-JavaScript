@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Passporte</title>
+</head>
+<body>
+    <h1>Verificando Nacionalidade</h1>
+    <label for="inac">Informe seu país</label> <input type="text" id="inac">
+    <input type="button" value="Confirmar" onclick="nacionalidade()">
+    <div id="res"></div>
+
+    <script>
+        function nacionalidade() {
+            var nac = document.getElementById('inac').value
+            var res = document.getElementById('res')
+            
+            if (nac.toLowerCase() === 'brasil') {
+                res.innerHTML = `<p>Você é Brasileiro!</p>`;
+            } else {
+                res.innerHTML = `<p>Você é Estrangeiro!</p>`;
+            }
+        }
+    </script>
+</body>
+</html>
